@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👀</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>When is my birthday?</h1>
+        <input type="password" id="password" placeholder="Enter the date... (DD-MM-YYYY)">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error" class="error" style="display: none;">Incorrect date. Try again!</p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const correctPassword = "15-07-2008";
+
+            if (password === correctPassword) {
+                window.location.href = "main.html";
+            } else {
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
